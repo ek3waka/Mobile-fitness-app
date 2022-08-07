@@ -1,170 +1,319 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 :root {
-    --card-width: 300px;
-    --card-height: 500px;
-    box-sizing: border-box;
+  --card-width: 300px;
+  --card-height: 500px;
+  box-sizing: border-box;
 }
 
-html, body, div, span, applet, object, iframe, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, p,
-b, u, i, h1, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+p,
+b,
+u,
+i,
+h1,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-
-
 html {
-    height: 100%;
-    font-size: 16px;
+  height: 100%;
+  font-size: 16px;
 }
 
 body {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
-    background-color: #0B0B12;
-    color: white;
-    
-    padding-left: 1rem;
-    padding-right: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  background-color: #0b0b12;
+  color: white;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .wrapper {
-    min-height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    position: relative;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+  gap: 2.25rem;
 }
 
 header {
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 3rem;
-    gap: 0.75rem
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  gap: 0.75rem;
 }
 
 main {
-    width: 100%;
-    flex: 1 1 auto;
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 footer {
-    height: 3rem;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    margin-bottom: 1rem;
+  height: 3rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 1rem;
 }
 
 button {
-    padding: 0;
-    border: none;
-    background-color: inherit;
+  padding: 0;
+  border: none;
+  background-color: inherit;
 }
 
 .header-icon {
-    height: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-color: #161626;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #161626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-text {
-    height: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.25rem
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
 }
 
 .header-date {
-    font-size: 1.5rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .header-user-icon {
-    height: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-color: #2F80ED;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #2f80ed;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }
 
 .header-small {
-    height: 2rem;
+  height: 2rem;
 }
 
 .header-small-icons {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
 
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem
+}
+
+.date-container {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date-container-date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #161626;
+  border-radius: 0.75rem;
+  width: 5rem;
+  height: 5.25rem;
+  gap: 0.5rem
+}
+
+.active {
+  background-color: #2f80ed;
+}
+
+.date-item-text-date {
+  font-size: 2.5rem;
+}
+
+.exercise-container-header {
+  font-size: 1.25rem;
+}
+
+.exercise-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem
+}
+
+.exercise-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem
+}
+
+
+
+.exercise-container-exercise-item {
+  width: 10rem;
+  height: 14rem;
+  background-color: #161626;
+  border-radius: 1rem;
+  display: flex
+}
+
+
 .footer-small {
-    height: 2.5rem;
+  height: 2.5rem;
 }
 
 .footer-small-icons {
-    fill: #42424D;
+  fill: #42424d;
 }
 
 .footer-huge {
-    height: 4.5rem;
+  height: 4.5rem;
 }
 
 .footer-huge-icons {
-    fill: #2F80ED;
+  fill: #2f80ed;
 }
